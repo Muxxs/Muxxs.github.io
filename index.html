@@ -13,7 +13,54 @@
 	background:#66B3FF;
 	color:white
 }
-
+.spinner {
+  margin: 100px auto;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  text-align: center;
+   
+  -webkit-animation: rotate 2.0s infinite linear;
+  animation: rotate 2.0s infinite linear;
+}
+ 
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #67CF22;
+  border-radius: 100%;
+   
+  -webkit-animation: bounce 2.0s infinite ease-in-out;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+ 
+.dot2 {
+  top: auto;
+  bottom: 0px;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+ 
+@-webkit-keyframes bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
 	</style>
 <div href="#top"class="jumbotron">
     <div class="container">
@@ -69,12 +116,20 @@
 	   <br>
            让我们看一段视频<br>   
 	       </p>
-				       <div class="uk-cover uk-position-relative">
+	       <body onload="正在加载">
+		       <div>
+			        <div class="spinner">
+  					<div class="dot1"></div>
+  					<div class="dot2"></div>
+				</div>
+		       </div>
+		<div style="diaplay:none;" class="uk-cover uk-position-relative">
 	    <img class="uk-invisible" src="http://oj4z6ohqu.bkt.clouddn.com/1207164400.jpg" width="1920" height="1080" alt="">
 	    <video class="uk-cover-object uk-position-absolute" width="" height="" autoplay loop muted controls>
 		<source src="http://oj4z6ohqu.bkt.clouddn.com/about%20love.mp4" type="video/mp4">
 	    </video>
 	</div>
+		       </body>
          <span class="glyphicon glyphicon-heart"></span><h4>大家新年快乐</h4>
        </div>	
 	<!--2017-1-2-finish--> 
@@ -142,38 +197,7 @@
        </div>	
 	<!--2017-1-2-finish--> 
 		
-		<!--2017-1-2-start--> 
-       <div href="#3" class="well">
-         <h3>关于这个网站</h3><br><!--title-->
-	       <hr>
-	       <!--text--> 
-	       <div class='uk-text-large'>date:2017-1-2 time:10:34</div><!--time-->
-           <p>
-	   <br>
-           准备情人节那天表白<br>
-		 
-					  <script type="text/javascript" language="javascript">
-			var endDate=new Date(2017,1,14,0,0,0);//年月日时分秒，月要减去1
-			(function daoJiShi()
-			{
-			 var now=new Date();
-			 var oft=Math.round((endDate-now)/1000);
-			 var ofd=parseInt(oft/3600/24);
-			 var ofh=parseInt((oft%(3600*24))/3600);
-			 var ofm=parseInt((oft%3600)/60);
-			 var ofs=oft%60;
-			 document.getElementById('timer').innerHTML='还有 '+ofd+' 天 ' +ofh+ ' 小时 ' +ofm+ ' 分钟 ' +ofs+ ' 秒';
-			 if(ofs<0){document.getElementById('timer').innerHTML='倒计时结束！';return;};
-			 setTimeout('daoJiShi()',1000);
-			}());
-
-			</script> 
-		   
-		   
-           </p>
-         <span class="glyphicon glyphicon-heart"></span><h4>以后会经常改样式</h4>
-       </div>	
-	<!--2017-1-2-finish--> 
+		
 		
 	</div>
 		</div>
