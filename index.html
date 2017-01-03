@@ -7,6 +7,7 @@
 <script type="text/javascript" src="file/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="file/uikit/js/uikit.js"></script>
 <script type="text/javascript" src="file/uikit/js/components/parallax.js"></script>
+<script src="/audiojs/audio.min.js"></script>
 <script src="rAF.js"></script>
 <script src="demo-2.js"></script>
 <link rel="stylesheet" type="text/css" href="normalize.css" />
@@ -14,6 +15,11 @@
 
 <!--必要样式-->
 <link rel="stylesheet" type="text/css" href="component.css" />
+<script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
 
 	<title>我爱世界，最爱她</title>
   <style>
@@ -252,9 +258,9 @@
 		   我也不甘心听天由命<br>
 		   所以我就不停的做一些事情，让我尽量不去想这件事<br>
 		   然后就- -啊啊啊啊啊啊煎熬，纠结，悲壮<br>
-		   <EMBED height=45 type=audio/mpeg width=300 src="http://oj4z6ohqu.bkt.clouddn.com/bg.mp3" volume="0" loop="-1"></EMBED>
+		   <audio src="http://oj4z6ohqu.bkt.clouddn.com/bg.mp3" preload="auto" />
 	       </p>
-         <span class="glyphicon glyphicon-heart-empty"></span><h4>非常不解，但是理解</h4>
+         <span class="glyphicon glyphicon-heart-empty"></span><h4>非常不解</h4>
        </div>	
 	<!--2017-1-3-finish--> 
 	
