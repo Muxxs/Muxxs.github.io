@@ -7,9 +7,12 @@
 <script type="text/javascript" src="file/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="file/uikit/js/uikit.js"></script>
 <script type="text/javascript" src="file/uikit/js/components/parallax.js"></script>
-<!--<script src="/audiojs/audio.min.js"></script>-->
-<link rel="stylesheet" href="audioplayer.css" /> 
-<script src="jquery.js"></script> 
+<script src="/audiojs/audio.min.js"></script>
+<script src="rAF.js"></script>
+<script src="demo-2.js"></script>
+<link rel="stylesheet" type="text/css" href="normalize.css" />
+<link rel="stylesheet" type="text/css" href="demo.css" />
+
 <!--必要样式-->
 <link rel="stylesheet" type="text/css" href="component.css" />
 <script>
@@ -17,18 +20,6 @@
     var as = audiojs.createAll();
   });
 </script>
-<script src="audioplayer.min.js"></script> 
-<script> 
-$(function() {  
-    $('audio').audioPlayer(); 
-}); 
-$('audio').audioPlayer({ 
-    classPrefix: '送给你的音乐', 
-    strPlay: '播放', 
-    strPause: '暂停', 
-    strVolume: 'Volume' 
-}); 
-</script> 
 
 	<title>我爱世界，最爱她</title>
   <style>
@@ -150,7 +141,9 @@ $('audio').audioPlayer({
 		       </div>
 		<div style="diaplay:none;" class="uk-cover uk-position-relative">
 	    <img class="uk-invisible" src="http://oj4z6ohqu.bkt.clouddn.com/1207164400.jpg" width="1920" height="1080" alt="">
-	    <audio preload="auto" controls autoplay> <source src="http://oj4z6ohqu.bkt.clouddn.com/about%20love.mp4" /></audio>
+	    <video class="uk-cover-object uk-position-absolute" width="" height="" autoplay loop muted controls>
+		<source src="http://oj4z6ohqu.bkt.clouddn.com/about%20love.mp4" type="video/mp4">
+	    </video>
 	</div>
 		       </body>
          <span class="glyphicon glyphicon-heart"></span><h4>大家新年快乐</h4>
@@ -265,7 +258,7 @@ $('audio').audioPlayer({
 		   我也不甘心听天由命<br>
 		   所以我就不停的做一些事情，让我尽量不去想这件事<br>
 		   然后就- -啊啊啊啊啊啊煎熬，纠结，悲壮<br>
-		   <audio preload="meta"> <source src="http://oj4z6ohqu.bkt.clouddn.com/bg.mp3" /></audio>
+		   <audio src="http://oj4z6ohqu.bkt.clouddn.com/bg.mp3" preload="auto" />
 	       </p>
          <span class="glyphicon glyphicon-heart-empty"></span><h4>非常不解</h4>
        </div>	
@@ -292,14 +285,14 @@ $('audio').audioPlayer({
 		   注：我有百分之百的信心相信我的判断，如果有错，我向她道歉<br>
 	           我不能因为她而改变我的信念和我的未来<br>
 		   就像《你的名字》那样，只要相信她是你的那个从前前前世就注定的你的伴侣<br>
-		   <audio preload="meta"> <source src="http://oj4z6ohqu.bkt.clouddn.com/RADWIMPS%20%28%E3%83%A9%E3%83%83%E3%83%88%E3%82%99%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%95%E3%82%9A%E3%82%B9%29-%E5%89%8D%E5%89%8D%E5%89%8D%E4%B8%96%20%28Movie%20ver.%29.mp3" /></audio>
+		   <audio src="http://oj4z6ohqu.bkt.clouddn.com/RADWIMPS%20%28%E3%83%A9%E3%83%83%E3%83%88%E3%82%99%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%95%E3%82%9A%E3%82%B9%29-%E5%89%8D%E5%89%8D%E5%89%8D%E4%B8%96%20%28Movie%20ver.%29.mp3" preload="auto" />
 	       </p>
 	       <h3>那么她就终将是你的那个Ta</h3>
          <span class="glyphicon glyphicon-remove"></span><h4>坚定自己的信念</h4>
        </div>	
 	<!--2017-1-3-finish--> 
 	
-	<!--2017-1-4-start--> 
+	<!--2017-1-3-start--> 
        <div href="#5" class="well">
          <h3>委屈</h3><br><!--title-->
 	       <hr>
@@ -317,39 +310,39 @@ $('audio').audioPlayer({
 		   可是前天晚上十点多你还在跟我讲笑话<br>
 		   第二天啥都没说直接就冷了<br>
 		   实在让我难以接受<br>
-		   <audio preload="meta"> <source src="http://oj4z6ohqu.bkt.clouddn.com/Capo%20Productions%20-%20Real.mp3" /></audio>
-		  	
-       </p>
-	       <h3>仍在艰难的相信，没什么能阻拦我</h3>
-         <span class="glyphicon glyphicon-heart-empty"></span><h4>勿忘初心</h4>
-       </div>	
-	<!--2017-1-4-finish--> 
-	
-	<!--2017-1-4-start--> 
-       <div href="#5" class="well">
-         <h3>愤怒</h3><br><!--title-->
-	       <hr>
-	       <!--text--> 
-	       <div class='uk-text-large'>date:2017-1-4 time:19:04</div><!--time-->
-           <p>
-	   <br>
-           	   这是第一次<br>		
-   		   她一整天一句话都没跟我说<br>
-		   我很少经历到这种事情<br>
-		   遇到这种“疑似有人挑拨”也是第一次<br>
-		   经验不足的我第一次慌了<br>
-		   不知道该干什么<br>	
-		   手足无措<br>
-		   但是基本的方向是不变的<br>
-		   只是具体的方法我不知道<br>
-		   唯一确定的是<br>	
-		   向着光亮那方，向着她的方向吧！<br>
-		   <audio preload="meta"> <source src="http://oj4z6ohqu.bkt.clouddn.com/Jon%20Schmidt%20-%20Love%20Story%20meets%20Viva%20La%20Vida.mp3" /></audio>
+		   <audio src="http://oj4z6ohqu.bkt.clouddn.com/Capo%20Productions%20-%20Real.mp3" preload="auto" />
 	       </p>
 	       <h3>仍在艰难的相信，没什么能阻拦我</h3>
          <span class="glyphicon glyphicon-heart-empty"></span><h4>勿忘初心</h4>
        </div>	
-	<!--2017-1-4-finish--> 
+	<!--2017-1-3-finish--> 
+	
+	<!--2017-1-3-start--> 
+       <div href="#5" class="well">
+         <h3>委屈</h3><br><!--title-->
+	       <hr>
+	       <!--text--> 
+	       <div class='uk-text-large'>date:2017-1-4 time:8:57</div><!--time-->
+           <p>
+	   <br>
+           	   这是第一次<br>
+	           她一整天一句话都没跟我说<br>
+		   我很少经历到这种事情<br>
+		   遇到这种“疑似有人挑拨”也是第一次<br>
+		   经验不足的我第一次慌了<br>
+	           不知道该干什么<br>
+		   手足无措<br>
+		   但是基本的方向是不变的<br>
+		   只是具体的方法我不知道<br>
+		   唯一确定的是<br>
+		   向着光亮那方，向着她的方向吧！<br>
+		   <audio src="http://oj4z6ohqu.bkt.clouddn.com/Jon%20Schmidt%20-%20Love%20Story%20meets%20Viva%20La%20Vida.mp3" preload="auto" />
+	       </p>
+	       <h3>她就是花瓣飘来的方向</h3>
+         <span class="glyphicon glyphicon-heart"></span><h4>怦然心亦动</h4>
+       </div>	
+	<!--2017-1-3-finish--> 
+	
 	
 	
 
@@ -361,10 +354,6 @@ $('audio').audioPlayer({
 	<a href="#top" class="uk-button" data-uk-smooth-scroll>飞到顶部</a>
     <p>
       写在结尾的话：<br>
-	    我并不想那么早就和她谈恋爱（虽然也很难那么早就谈），因为按照概率来讲，从高中谈一辈子的概率远远小于大学<br>
-	    这也是我没有表白的一个很重要的原因<br>
-	    这个域名买了三年，这个网页永远不会消失<br>
-	    终究会有那么一天的<br>
           我可能会有很长的路要走，但是我相信她值得，我会持续更新。我最爱的人，是郑晶晶
     </p>
     <div class="alert alert-success" role="alert">
