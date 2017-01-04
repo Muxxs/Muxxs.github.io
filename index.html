@@ -17,6 +17,18 @@
     var as = audiojs.createAll();
   });
 </script>
+<script src="audioplayer.min.js"></script> 
+<script> 
+$(function() {  
+    $('audio').audioPlayer(); 
+}); 
+$('audio').audioPlayer({ 
+    classPrefix: '送给你的音乐', 
+    strPlay: '播放', 
+    strPause: '暂停', 
+    strVolume: 'Volume' 
+}); 
+</script> 
 
 	<title>我爱世界，最爱她</title>
   <style>
